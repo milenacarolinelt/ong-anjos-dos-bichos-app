@@ -1,0 +1,44 @@
+@use "core/_variables" as *;
+@use "core/_mixins" as *;
+@use "core/_animation.scss";
+
+.eu-adb-diary {
+  &__table {
+    h3 {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+
+    table {
+      width: 100%;
+      margin: 0 0 15px;
+
+      td, th {
+        border: 1px solid $gray_light-color;
+        padding: 3px 5px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      th {
+        background-color: $blue-color;
+        color: $white-color;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      td {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.eu-adb-menu__item {
+  &.menu__item--diary {
+    opacity: 1;
+  }
+}

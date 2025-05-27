@@ -10,7 +10,10 @@ const babelify = require('babelify')
 const source = require('vinyl-source-stream')
 const buffer = require('vinyl-buffer')
 
-const allFiles = [ 'general' ];
+const allFiles = [ 
+  'general', 'home', 'castration', 'diary', 
+  'donation', 'rescue', 'search', 'animal' 
+];
 
 module.exports = function (args, assets, dist) {
   /**

@@ -7,9 +7,9 @@ module.exports = (args, assets, dist) => {
    * Copia/minifica imagens
    */
   gulp.task('images', () => {
-    return gulp.src( assets + 'img/**/*')
+    return gulp.src( assets + 'images/**/*')
       .pipe(gulpIf(args.production, imageMin()))
-      .pipe(gulp.dest(dist + 'img'))
+      .pipe(gulp.dest(dist + 'images'))
   });
 
   /**

@@ -2,7 +2,7 @@
 Repositório destinado ao controle de versão do aplicativo ``, com:
 - ES2015 (Babel)
 - SASS
-- Pug
+- Express.js
 - Gulp
 - Nodejs
 

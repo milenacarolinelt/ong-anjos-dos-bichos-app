@@ -1,5 +1,261 @@
+@use "core/_variables" as *;
 @use "core/_fonts.scss";
 @use "core/_reset.scss";
-@use "core/_mixins";
-@use "core/_variables";
+@use "core/_mixins" as *;
 @use "core/_plugins.scss";
+@use "core/_animation.scss";
+
+
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  background-color: $gray_light-color;
+}
+
+main {
+  max-width: 440px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: $white-color;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  // row-gap: 10px;
+}
+
+.w-80 {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.eu-adb-header {
+  padding: 10px 20px 5px;
+  box-shadow: 0px 10px 15px 5px rgba(204, 204, 204, 0.1);
+
+  &__list {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+  }
+
+  &__item {
+    padding: 0 10px;
+    cursor: pointer;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $black-color;
+      
+      img {
+        max-width: 18px;
+        height: auto;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    &.logo__item {
+      padding: 0;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          width: 45px;
+          max-width: 45px;
+          margin-right: 10px;
+          height: auto;
+        }
+      }
+
+      h1{
+        font-size: 18px;
+      }
+    }
+
+  }
+}
+
+
+footer {
+  
+}
+
+.eu-adb-menu {
+  // box-shadow: 0px 2px 8px 0px #CCCCCC50;
+  box-shadow: 0px 10px 15px 10px rgba(204, 204, 204, 0.1);
+
+
+  &__navigation {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__item {
+    padding: 10px 10px;
+    opacity: .20;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      color: $black-color;
+
+      img {
+        max-width: 24px;
+        height: auto;
+        margin: 0 auto 5px;
+      }
+
+      p {
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.eu-adb-section {
+  overflow: auto;
+  height: 100%;
+  padding: 15px 20px;
+
+  &__title {
+    text-align: center;
+    margin: 0 0 15px;
+    color: $blue-color;
+    font-weight: 700;
+  }
+
+  p {
+    padding-bottom: 10px;
+    text-indent: 35px;
+  }
+}
+
+.eu-adb-notification {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $white-color;
+  max-width: 440px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  transform: translateX(150%);
+  opacity: 0;
+  visibility: hidden;
+  
+
+  &.active {
+    z-index: 9;
+    opacity: 1;
+    visibility: visible;
+    animation: slideFromRightAnimation .6s forwards;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px;
+
+    button {
+      appearance: none;
+      background-image: url("/images/icons/arrow-left.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #F7F8F8;
+      background-size: 16px auto;
+      border: none;
+      width: 32px;
+      height: 28px;
+      font-size: 0;
+      cursor: pointer;
+      border-radius: 4px;
+      
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  &__section {
+    overflow: auto;
+  }
+}
+
+.eu-adb-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__title {
+    text-align: left;
+    margin: 0 0 15px;
+    color: $blue-color;
+    font-weight: 700;
+    font-size: 19px;
+    text-decoration: underline;
+  }
+  
+  &__content {
+    
+  }
+
+  &__control {
+    margin: 0 0 10px;
+    display: block;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $gray_light-color;
+    padding: 7px;
+    font-size: 15px;
+  }
+
+  &__textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $gray_light-color;
+    padding: 7px;
+    font-size: 15px;
+    color: $black-color;
+  }
+
+  &__submit {
+    appearance: none;
+    border-radius: 15px;
+    border: 2px solid $blue-color;
+    background-color: $blue-color;
+    color: $white-color;
+    padding: 7px;
+    margin: 20px auto 0;
+    display: block;
+    width: 100px;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $white-color;
+      color: $blue-color;
+      cursor: pointer;
+    }
+    
+    &:active {
+      border: 2px solid $black-color;
+      background-color: $black-color;
+      color: $white-color;     
+    }
+  }
+}

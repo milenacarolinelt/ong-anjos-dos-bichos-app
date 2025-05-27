@@ -1,0 +1,13 @@
+@use "core/_variables" as *;
+@use "core/_mixins" as *;
+@use "core/_animation.scss";
+
+.eu-adb-donation {
+
+}
+
+.eu-adb-menu__item {
+  &.menu__item--donation {
+    opacity: 1;
+  }
+}

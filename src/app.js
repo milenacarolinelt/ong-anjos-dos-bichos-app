@@ -83,7 +83,6 @@ class App {
         "Permissions-Policy",
         'geolocation=(self "https://www.youtube.com/"), fullscreen=(self "https://www.youtube.com/"), autoplay=("https://www.youtube.com/"), encrypted-media=("https://www.youtube.com/"), gyroscope=("https://www.youtube.com/"), web-share=("https://www.youtube.com/"), accelerometer=("https://www.youtube.com/"), payment=(self), picture-in-picture=(self "https://www.youtube.com/")'
       );
-      res.set('Access-Control-Allow-Origin', 'https://contato.renault.com.br');
       res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
       res.set('Access-Control-Allow-Headers', '*');
       res.set('Access-Control-Allow-Credentials', true);

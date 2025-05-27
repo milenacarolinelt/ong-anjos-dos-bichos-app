@@ -1,3 +1,6 @@
+@use "core/_variables" as *;
+@use "core/_mixins" as *;
+
 @keyframes tableRowAnimation {
   0% {
     min-height: 0;
@@ -52,6 +55,7 @@
   }
 }
 
+
 @-webkit-keyframes slideFromRightAnimation {
   0% {
     -webkit-transform: translateX(150%);
@@ -66,11 +70,36 @@
   }
 }
 
+
+
+@keyframes slideBackRightAnimation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+}
+
+
+@-webkit-keyframes slideBackRightAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(150%);
+    opacity: 0;
+  }
+}
+
 @keyframes animate-right {
   0% {
     width: 0;
     height: 0;
-    border-top-color: $_yellow-color-2;
+    border-top-color: $yellow-color-2;
     border-bottom-color: transparent;
     border-right-color: transparent;
     border-left-color: transparent;
@@ -79,16 +108,16 @@
   50% {
     width: calc(100% - 4px);
     height: 0;
-    border-top-color: $_yellow-color-2;
-    border-right-color: $_yellow-color-2;
+    border-top-color: $yellow-color-2;
+    border-right-color: $yellow-color-2;
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
   100% {
     width: calc(100% - 4px);
     height: calc(100% - 4px);
-    border-top-color: $_yellow-color-2;
-    border-right-color: $_yellow-color-2;
+    border-top-color: $yellow-color-2;
+    border-right-color: $yellow-color-2;
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
@@ -109,16 +138,16 @@
     height: calc(100% - 4px);
     border-top-color: transparent;
     border-right-color: transparent;
-    border-bottom-color: $_yellow-color-2;
-    border-left-color: $_yellow-color-2;
+    border-bottom-color: $yellow-color-2;
+    border-left-color: $yellow-color-2;
   }
   100% {
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     border-top-color: transparent;
     border-right-color: transparent;
-    border-bottom-color: $_yellow-color-2;
-    border-left-color: $_yellow-color-2;
+    border-bottom-color: $yellow-color-2;
+    border-left-color: $yellow-color-2;
   }
 }
 
@@ -141,28 +170,6 @@
 
   50% {
     transform: rotateY(90deg);
-  }
-}
-
-@keyframes spin-loader-renault {
-  100% {
-    transform: rotateY(-90deg);
-  }
-
-  0% {
-    transform: rotateY(90deg);
-  }
-
-  50% {
-    transform: rotateY(90deg);
-  }
-
-  60% {
-    transform: rotateY(0deg);
-  }
-
-  98% {
-    transform: rotateY(0deg);
   }
 }
 

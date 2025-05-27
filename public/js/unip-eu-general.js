@@ -1,12 +1,1 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";
-
-var El = {};
-
-var Methods = {
-  init: function init() {}
-};
-
-window.addEventListener("DOMContentLoaded", Methods.init);
-
-},{}]},{},[1]);
+!function t(i,n,e){function o(r,a){if(!n[r]){if(!i[r]){var f="function"==typeof require&&require;if(!a&&f)return f(r,!0);if(c)return c(r,!0);var u=new Error("Cannot find module '"+r+"'");throw u.code="MODULE_NOT_FOUND",u}var s=n[r]={exports:{}};i[r][0].call(s.exports,(function(t){return o(i[r][1][t]||t)}),s,s.exports,t,i,n,e)}return n[r].exports}for(var c="function"==typeof require&&require,r=0;r<e.length;r++)o(e[r]);return o}({1:[function(t,i,n){"use strict";var e={header:{notification:document.querySelector(".js-open-notification")},notification:{section:document.querySelector(".js-section-notification"),back:document.querySelector(".js-back-notification")}},o={init:function(){o.notification()},notification:function(){e.header.notification.addEventListener("click",(function(t){e.notification.section.classList.add("active")})),e.notification.back.addEventListener("click",(function(t){e.notification.section.classList.remove("active")}))}};window.addEventListener("DOMContentLoaded",o.init)},{}]},{},[1]);

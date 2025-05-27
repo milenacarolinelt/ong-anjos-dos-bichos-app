@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow, noodp, noydir" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta name="msapplication-navbutton-color" content="#000000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel='stylesheet' href='/css/unip-eu-general.css' />
+    <link rel='stylesheet' href='/css/unip-eu-search.css' />
+  </head>
+
+  <body class="eu-adb-search">
+    <main>
+      <%- include('components/header') %>
+
+      <section class="eu-adb-section">
+        <h2 class="eu-adb-section__title search-title">Buscar Peludinhos</h2>
+        <div class="eu-adb-form">
+          <form class="eu-adb-form__content">
+            <div class="eu-adb-form__control">
+              <input type="text" class="eu-adb-form__input" placeholder="Buscar" />
+            </div>
+          </form>
+        </div>
+
+        <div class="eu-adb-search__tab">
+          <ul>
+            <li>Cachorros</li>
+            <li>Gatos</li>
+            <li>Todos</li>
+          </ul>
+        </div>
+
+        <div class="eu-adb-search__result">
+          <div class="eu-adb-search__item">
+            <div class="eu-adb-search__item--image"> <img src=""/> </div>
+            <h4 class="eu-adb-search__item--name">Nome</h4>
+            <p class="eu-adb-search__item--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aliquid atque odit at doloribus.</p>
+            <ul class="eu-adb-search__item--info">
+              <li>Castrado</li>
+              <li>Vacinado</li>
+            </ul>
+            <div class="eu-adb-search__item--tags">
+              <span>#tag</span>
+              <span>#tag</span>
+              <span>#tag</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <%- include('components/menu') %>
+    </main>
+
+    <script type="text/javascript" src="/js/unip-eu-general.js"></script>
+    <script type="text/javascript" src="/js/unip-eu-search.js"></script>
+  </body>
+</html>

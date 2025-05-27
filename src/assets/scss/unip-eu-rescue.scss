@@ -1,0 +1,13 @@
+@use "core/_variables" as *;
+@use "core/_mixins" as *;
+@use "core/_animation.scss";
+
+.eu-adb-rescue {
+
+}
+
+.eu-adb-menu__item {
+  &.menu__item--rescue {
+    opacity: 1;
+  }
+}

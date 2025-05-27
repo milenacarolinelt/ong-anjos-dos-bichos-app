@@ -1,0 +1,13 @@
+@use "core/_variables" as *;
+@use "core/_mixins" as *;
+@use "core/_animation.scss";
+
+.eu-adb-home {
+
+}
+
+.eu-adb-menu__item {
+  &.menu__item--home {
+    opacity: 1;
+  }
+}

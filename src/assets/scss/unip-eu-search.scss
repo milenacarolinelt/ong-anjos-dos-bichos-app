@@ -1,0 +1,16 @@
+@use "core/_variables" as *;
+@use "core/_mixins" as *;
+@use "core/_animation.scss";
+
+.eu-adb-search {
+  .search-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $black-color;
+    margin: 10px 0 0;
+  }
+}
+
+.eu-adb-card {
+  
+}

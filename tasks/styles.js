@@ -6,7 +6,10 @@ const notify = require('gulp-notify')
 const plumber = require('gulp-plumber')
 const merge = require('merge-stream')
 
-const allFiles = [ 'general', 'home' ];
+const allFiles = [ 
+  'general', 'home', 'castration', 'diary', 
+  'donation', 'rescue', 'search', 'animal' 
+];
 
 module.exports = function (args, assets, dist) {
   /**
