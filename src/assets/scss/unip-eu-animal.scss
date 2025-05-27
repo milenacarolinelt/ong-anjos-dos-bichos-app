@@ -4,4 +4,94 @@
 
 .eu-adb-animal {
 
+
+  &__item {
+    border-radius: 25px;
+    border-top-right-radius: 55px;
+    border: 2px solid;
+    margin-top: 30px;
+    padding: 120px 20px 15px;
+    position: relative;
+
+    &.female {
+      border-color: #F9EBF8;
+      background-color: #F9EBF8;
+    }
+
+    &.male {
+      border-color: #73AAFF;
+      background-color: #73AAFF;
+    }
+
+
+    &--image {
+      height: 150px;
+      width: 150px;
+      border: 10px solid #FFF;
+      border-radius: 50%;
+      position: absolute;
+      top: -30px;
+      right: -5px;
+      margin:  0 auto;
+      display: block;
+      background-color: $gray-color;
+    }
+    
+    &--name {
+      font-size: 42px;
+      line-height: 42px;
+      color: $black-color;
+      padding-right: 100px;
+      margin-bottom: 20px;
+    }
+    
+    &--description {
+      font-size: 18px;
+      line-height: 18px;
+      text-indent: 0 !important;
+      padding: 5px 0 15px !important;
+      color: $gray_darker-color;
+
+      &.attention {
+        font-size: 17px;
+        line-height: 17px;
+        color: #D520F8;
+      }
+    }
+    
+    &--info {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 600;
+      color: $gray_darker-color;
+
+    }
+    
+    &--tags {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 15px 0 0;
+      color: $gray_darker-color;
+    }
+  }
+
+  &__infos {
+    margin: 20px;
+
+    li {
+      display: flex;
+      font-size: 17px;
+      padding-bottom: 3px;
+      
+      span {
+        width: 70px;
+        font-weight: 600;
+      }
+
+      p {
+        text-indent: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  }
 }
