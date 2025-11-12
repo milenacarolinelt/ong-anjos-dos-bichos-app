@@ -5,7 +5,6 @@
 @use "core/_plugins.scss";
 @use "core/_animation.scss";
 
-
 body {
   font-family: $font-family-base;
   font-weight: $font-weight-base;
@@ -29,7 +28,7 @@ main {
 }
 
 .eu-adb-header {
-  padding: 10px 20px 5px;
+  padding: 10px 15px 5px;
   box-shadow: 0px 10px 15px 5px rgba(204, 204, 204, 0.1);
 
   &__list {
@@ -51,7 +50,7 @@ main {
       flex-direction: column;
       align-items: center;
       color: $black-color;
-      
+
       img {
         max-width: 18px;
         height: auto;
@@ -79,23 +78,19 @@ main {
         }
       }
 
-      h1{
-        font-size: 18px;
+      h1 {
+        font-size: 17px;
       }
     }
-
   }
 }
 
-
 footer {
-  
 }
 
 .eu-adb-menu {
   // box-shadow: 0px 2px 8px 0px #CCCCCC50;
   box-shadow: 0px 10px 15px 10px rgba(204, 204, 204, 0.1);
-
 
   &__navigation {
     display: grid;
@@ -104,7 +99,7 @@ footer {
 
   &__item {
     padding: 10px 10px;
-    opacity: .20;
+    opacity: 0.2;
 
     a {
       display: flex;
@@ -138,8 +133,45 @@ footer {
   }
 
   p {
-    padding-bottom: 10px;
-    text-indent: 35px;
+    padding-bottom: 5px;
+    text-indent: 20px;
+    font-size: 15px;
+
+    &.alert-text {
+      padding-top: 10px;
+      color: rgb(218, 39, 39);
+      font-weight: 600;
+    }
+  }
+
+  span {
+    &.alert-text {
+      color: rgb(218, 39, 39);
+      font-weight: 500;
+    }
+  }
+
+  &__box {
+    border: 2px solid $blue-color;
+    padding: 15px;
+    width: auto;
+    display: inline-block;
+    margin: 15px 0 15px 20px;
+
+    p {
+      text-indent: 0;
+      padding: 0;
+    }
+  }
+
+  &__list {
+    list-style: inside;
+    padding: 0 0 0 20px;
+
+    li {
+      font-size: 15px;
+      padding: 5px 0;
+    }
   }
 }
 
@@ -154,13 +186,12 @@ footer {
   transform: translateX(150%);
   opacity: 0;
   visibility: hidden;
-  
 
   &.active {
     z-index: 9;
     opacity: 1;
     visibility: visible;
-    animation: slideFromRightAnimation .6s forwards;
+    animation: slideFromRightAnimation 0.6s forwards;
   }
 
   &__header {
@@ -173,7 +204,7 @@ footer {
       background-image: url("/images/icons/arrow-left.png");
       background-repeat: no-repeat;
       background-position: center;
-      background-color: #F7F8F8;
+      background-color: #f7f8f8;
       background-size: 16px auto;
       border: none;
       width: 32px;
@@ -181,7 +212,6 @@ footer {
       font-size: 0;
       cursor: pointer;
       border-radius: 4px;
-      
     }
 
     h2 {
@@ -206,10 +236,18 @@ footer {
     font-weight: 700;
     font-size: 19px;
     text-decoration: underline;
+    text-align: center;
   }
-  
+
   &__content {
-    
+    margin: 0 0 30px;
+  }
+
+  &__social-media {
+    display: grid;
+    grid-template-columns: 35px 35px 35px;
+    gap: 10px;
+    justify-content: center;
   }
 
   &__control {
@@ -251,11 +289,11 @@ footer {
       color: $blue-color;
       cursor: pointer;
     }
-    
+
     &:active {
       border: 2px solid $black-color;
       background-color: $black-color;
-      color: $white-color;     
+      color: $white-color;
     }
   }
 }
